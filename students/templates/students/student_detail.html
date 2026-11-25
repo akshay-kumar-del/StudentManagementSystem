@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f3eaff;
+            padding: 30px;
+        }
+
+        .container {
+            width: 450px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        h2 {
+            color: #7138b5;
+        }
+
+        a {
+            display: inline-block;
+            margin: 15px;
+            color: #7138b5;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Student Profile</h2>
+
+    <img src="{{ student.profile_image.url }}">
+
+    <h3>{{ student.student_name }}</h3>
+
+    <p>Email: {{ student.email }}</p>
+
+    <p>Mobile: {{ student.mobile_number }}</p>
+
+    <p>Course: {{ student.course }}</p>
+
+    <p>Created Date: {{ student.created_date }}</p>
+
+    <a href="{% url 'student_list' %}">Back to Students</a>
+
+</div>
+
+</body>
+</html>
